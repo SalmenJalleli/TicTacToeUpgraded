@@ -4,6 +4,7 @@ import kotlin.system.exitProcess
 var currentPlayer=Player("",0," ")
 var otherPlayer=currentPlayer.copy()
 var playerInput = ""
+//added description comment
 fun main() {
     outer@ while (true) {
         println("Welcome to TicTacToe")
