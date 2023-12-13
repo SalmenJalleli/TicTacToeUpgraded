@@ -105,7 +105,6 @@ fun assignTurn(p1:Player,p2:Player){
         currentPlayer=p2
     }else{
         currentPlayer=p1
-        otherPlayer=p2
     }
     currentPlayer.isPlaying=true
 }
