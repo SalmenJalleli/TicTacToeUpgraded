@@ -103,9 +103,8 @@ class GameBoard {
         return false
         return moveCounter==(size*size)-1
     }*/
-    fun printMenu(){
-        val menuEntries = mapOf("1." to "Back","2." to "Score","3." to "New Game","4." to "Exit","5." to "About")
-        for ((k,v) in menuEntries.entries){
+    fun printMenu(entriesMenu:MutableMap<String,String>){
+        for ((k,v) in entriesMenu.entries){
             println("$k $v")
         }
     }
