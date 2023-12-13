@@ -20,7 +20,6 @@ class GameBoard {
         resetBoard()
         //gameIsOver=false
         moveCounter = 0
-        //displayBoard()
     }
     fun placeSign(x: Int, y: Int, move: String){
         if (/*!gameIsOver*/

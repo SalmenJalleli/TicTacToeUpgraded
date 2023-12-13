@@ -4,7 +4,6 @@ import kotlin.system.exitProcess
 var currentPlayer=Player("",0," ")
 var otherPlayer=currentPlayer.copy()
 var playerInput = ""
-//added description comment
 fun main() {
     outer@ while (true) {
         println("Welcome to TicTacToe")
@@ -104,27 +103,10 @@ private operator fun GameBoard.get(i: Int,j:Int): String {
 fun assignTurn(p1:Player,p2:Player){
     if (currentPlayer==p1){
         currentPlayer=p2
-        otherPlayer=p1
-        //p2.isPlaying=true
     }else{
         currentPlayer=p1
         otherPlayer=p2
-        //p1.isPlaying=true
     }
     currentPlayer.isPlaying=true
 }
 fun playerInputValidity(input: String):Boolean= ((input=="m") || (Regex("[1-3],[1-3]").matches(input)))
-
-/*var input = scanner.nextLine()
-val pattern = "^[1-3],$[1-3]"
-if (input=="m"){
-    myBoard.printMenu()
-}
-else if (Regex(pattern).matches(input)){
-    var list = input.split(',')
-    var row = list[0]
-    var col = list[1]
-    myBoard.placeSign(row.toInt()-1,col.toInt()-1,currentPlayer)
-}else{
-    println("Invalid input, please give a valid entry!")
-}*/
