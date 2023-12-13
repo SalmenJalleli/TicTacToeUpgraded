@@ -118,10 +118,10 @@ private operator fun GameBoard.get(i: Int,j:Int): String {
     return (this.board)[i][j]
 }
 fun assignTurn(p1:Player,p2:Player){
-    if (currentPlayer==p1){
-        currentPlayer=p2
+    currentPlayer = if (currentPlayer==p1){
+        p2
     }else{
-        currentPlayer=p1
+        p1
     }
     currentPlayer.isPlaying=true
 }
