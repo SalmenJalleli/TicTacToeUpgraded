@@ -69,7 +69,7 @@ fun main() {
                                 playerInput = scanner.nextLine()
                                 continue@outer2
                             }
-                            else if (myBoard.isDraw(myBoard)){
+                            else if (myBoard.moveCounter==9 && !myBoard.isWinningMove(coordinates[0].toInt() - 1, coordinates[1].toInt() - 1, currentPlayer.sign)){
                                 println("That's a draw!")
                                 assignTurn(player1,player2)
                                 myBoard.resetGame()

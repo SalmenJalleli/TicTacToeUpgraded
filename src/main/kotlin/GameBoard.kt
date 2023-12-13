@@ -1,6 +1,3 @@
-import java.util.Scanner
-import kotlin.system.exitProcess
-
 class GameBoard {
     private val size = 3
     val empty = "___"
@@ -42,9 +39,9 @@ class GameBoard {
             }*/
         }
     }
-    private fun isValidPosition(x: Int, y: Int):Boolean{
+    /*private fun isValidPosition(x: Int, y: Int):Boolean{
         return((x in 0..<size) && (y in 0..<size))
-    }
+    }*/
     fun isWinningMove(x: Int, y: Int, move:String):Boolean{
         //check the row
         for (i in 0..<size){
@@ -89,7 +86,7 @@ class GameBoard {
         return false
     }
     //getIndexOfEmpty: in case of 8 consecutive to check whether the 9th move leads to a draw or a win
-    private fun getIndexOfEmpty(board: GameBoard):List<Int>{
+    /*private fun getIndexOfEmpty(board: GameBoard):List<Int>{
         var indices = mutableListOf<Int>()
         for(i in 0..<size){
             if (board.board[i].contains(empty)){
@@ -98,15 +95,15 @@ class GameBoard {
             }
         }
         return indices
-    }
-    fun isDraw(board: GameBoard):Boolean{
+    }*/
+    /*fun isDraw(board: GameBoard):Boolean{
         if((size*size)-1==moveCounter){
             if(!board.isWinningMove(getIndexOfEmpty(board)[0],getIndexOfEmpty(board)[1],otherPlayer.sign))
                 return true
         }
         return false
         return moveCounter==(size*size)-1
-    }
+    }*/
     fun printMenu(){
         val menuEntries = mapOf("1." to "Back","2." to "Score","3." to "New Game","4." to "Exit","5." to "About")
         for ((k,v) in menuEntries.entries){
